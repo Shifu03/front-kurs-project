@@ -3,6 +3,7 @@ import styles from "./MainPage.module.scss";
 import { useNavigate } from "react-router-dom";
 import EventCard from "../../components/EventCard/EventCard";
 import exImg from "src/assets/imgs/exImg.png";
+import Filter from "../../components/Filter/Filter";
 
 const MainPage: React.FC<any> = () => {
 	const navigate = useNavigate();
@@ -12,7 +13,8 @@ const MainPage: React.FC<any> = () => {
 		<div className={styles.title}>
 			Рекомендуем
 		</div>
-		<div>
+		<div className={styles.wrap}>
+			<Filter />
 			<div className={styles.areaCards}>
 				{[...(new Array(17))].map((el) => {
 					return <EventCard img={exImg} name={"name"} location={"Brest"} dateFrom={"10.10.2025"} dateTo={"10.10.2222"}
