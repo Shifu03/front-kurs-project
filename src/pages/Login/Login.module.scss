@@ -1,0 +1,35 @@
+@import "src/variables.scss";
+
+.content {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  row-gap: 20px;
+}
+
+.title {
+  color: #49734C;
+  font-size: 32px;
+  font-family: $mainFonFamily;
+  font-weight: 700;
+}
+
+.area {
+  width: 572px;
+  height: 355px;
+
+  padding: 42px 38px;
+
+  background: #F2F2F2;
+  border-radius: 8px;
+  border: 1px #A1A1A1 solid;
+
+  display: grid;
+  row-gap: 34px;
+  align-content: start;
+  justify-items: center;
+
+}

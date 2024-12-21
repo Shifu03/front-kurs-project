@@ -1,0 +1,96 @@
+@import "src/variables.scss";
+
+
+.wrap {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 176px;
+}
+
+.logo {
+  text-align: center;
+  color: #385758;
+  font-size: 40px;
+  font-family: $mainFonFamily;
+  font-weight: 700;
+}
+
+.wrapInput{
+  position: relative;
+
+  width: 750px;
+  height: 55px;
+
+  background: rgba(73, 115, 76, 0.10);
+  border-radius: 28px;
+  border: 1px #999999 solid;
+
+  padding-left: 10px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.searchBlock {
+  width: 600px;
+  height: 55px;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  &:hover{
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+}
+
+.block {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 85px;
+  height: 55px;
+
+  background: #49734C;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.line{
+  width: 4000px;
+  height: 1px;
+
+  position: relative;
+  left: -700px;
+
+  background: #878484;
+}
+
+.sections {
+  text-align: center;
+  color: #3C3C3C;
+  font-size: 24px;
+  font-family: $mainFonFamily;
+  font-weight: 700;
+
+  display: grid;
+  grid-auto-flow: column;
+
+  div{
+    height: 50px;
+
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+  }
+}

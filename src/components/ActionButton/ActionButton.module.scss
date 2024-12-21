@@ -1,0 +1,27 @@
+@import "src/variables.scss";
+
+
+.btn {
+  padding: 10px 30px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  background: #49734C;
+  border-radius: 16px;
+
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: $subMainFontFamily;
+  font-weight: 700;
+  line-height: 25.60px;
+
+  border: none;
+
+  &:hover {
+
+  }
+}

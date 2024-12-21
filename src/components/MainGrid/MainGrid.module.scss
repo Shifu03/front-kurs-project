@@ -1,0 +1,13 @@
+
+
+.wContent{
+  width: 100vw;
+
+  display: grid;
+  justify-content: center;
+  align-content: start;
+}
+
+.content{
+  width: min(1400px, 96vw);
+}
