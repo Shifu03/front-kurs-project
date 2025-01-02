@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./EventCard.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const EventCard: React.FC<{
 	img: string,
@@ -10,8 +11,10 @@ const EventCard: React.FC<{
 	time: string
 }> = ({ dateTo, img, name, time, location, dateFrom }) => {
 
+	const navigate = useNavigate();
+
 	return (
-		<div className={styles.content}>
+		<div className={styles.content} onClick={()=>navigate("/book")}>
 			<img src={img} alt={""} className={styles.img}/>
 			<div className={styles.title}>
 				{name}

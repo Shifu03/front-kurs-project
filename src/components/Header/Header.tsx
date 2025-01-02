@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import user from 'src/assets/imgs/user.svg';
 import loop from "src/assets/imgs/loop.svg";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
 
 	const [searchVal, setSearchVal] = useState("");
+
+	const navigate = useNavigate();
 
 	const handleSearch = () => {
 
@@ -29,7 +32,9 @@ const Header = () => {
 						<img src={loop} alt={""} />
 					</div>
 				</div>
-				<img src={user} alt={""} />
+				<img src={user} alt={""} onClick={()=>{
+					navigate("/profile");
+				}}/>
 			</div>
 			<div className={styles.line}>
 			</div>

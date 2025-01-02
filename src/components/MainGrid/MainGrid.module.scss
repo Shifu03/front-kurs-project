@@ -3,6 +3,8 @@
 .wContent{
   width: 100vw;
 
+  overflow-x: hidden;
+
   display: grid;
   justify-content: center;
   align-content: start;

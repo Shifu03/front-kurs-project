@@ -4,6 +4,10 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Header from "../components/Header/Header";
 import MainGrid from "../components/MainGrid/MainGrid";
+import Profile from "../pages/Profile/Profile";
+import NavigationInProfile from "../components/NavigationInProfile/NavigationInProfile";
+import MyTickets from "../pages/MyTickets/MyTickets";
+import BookTicket from "../pages/BookTicket/BookTicket";
 
 
 const AppRoutes = () => {
@@ -14,6 +18,14 @@ const AppRoutes = () => {
 			<Outlet />
 		</MainGrid>}>
 			<Route path="/" element={<MainPage />} />
+			<Route path="/book" element={<BookTicket />} />
+			<Route path="/profile" element={<div className={"profileContent"}>
+				<NavigationInProfile />
+				<Outlet/>
+			</div>}>
+				<Route path="/profile" element={<Profile />} />
+				<Route path="/profile/tickets" element={<MyTickets />} />
+			</Route>
 		</Route>
 		<Route path="/login" element={<Login />} />
 		<Route path="/register" element={<Register />} />

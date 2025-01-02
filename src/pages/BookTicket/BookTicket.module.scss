@@ -1,0 +1,58 @@
+@import "src/variables.scss";
+
+.content {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.blockBook {
+  width: 1200px;
+  height: 630px;
+
+
+  background: #F2F2F2;
+  border-radius: 8px;
+  border: 1px #A1A1A1 solid;
+
+  padding: 26px;
+}
+
+.img {
+  width: 350px;
+  height: 450px;
+
+
+}
+
+.info{
+  display: grid;
+  column-gap: 26px;
+  justify-content: start;
+  grid-auto-flow: column;
+}
+
+.wInfo{
+  display: grid;
+  align-content: start;
+  row-gap: 18px;
+}
+
+.title {
+  color: #3C3C3C;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+.footer{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+
+  margin-top: 18px;
+}
+
