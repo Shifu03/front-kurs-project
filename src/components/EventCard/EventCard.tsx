@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { fetchGetCurrentEvent } from "src/api/api";
 
 
-
 const EventCard: React.FC<{
 	img: string,
 	name: string,
@@ -27,8 +26,9 @@ const EventCard: React.FC<{
 			toast.error(er.response.data.message);
 		}
 	}
+  
 	return (
-		<div className={styles.content} onClick={() => handleToBookTicket(name)}>
+		<div className={styles.content} onClick={()=>navigate("/book")}>
 			<img src={img} alt={""} className={styles.img}/>
 			<div className={styles.title}>
 				{name}

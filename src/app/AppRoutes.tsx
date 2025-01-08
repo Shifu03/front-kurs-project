@@ -9,6 +9,11 @@ import NavigationInProfile from "src/components/NavigationInProfile/NavigationIn
 import Profile from "src/pages/Profile/Profile";
 import MyTickets from "src/pages/MyTickets/MyTickets";
 import Catalog from "src/pages/Catalog/Catalog";
+import Profile from "../pages/Profile/Profile";
+import NavigationInProfile from "../components/NavigationInProfile/NavigationInProfile";
+import MyTickets from "../pages/MyTickets/MyTickets";
+import BookTicket from "../pages/BookTicket/BookTicket";
+
 
 
 const AppRoutes = () => {

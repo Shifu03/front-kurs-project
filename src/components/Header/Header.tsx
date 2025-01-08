@@ -11,6 +11,8 @@ const Header = () => {
 
 	const [searchVal, setSearchVal] = useState("");
 
+	const navigate = useNavigate();
+
 	const handleSearch = () => {
 
 	}
@@ -152,7 +154,9 @@ const Header = () => {
 						<img src={loop} alt={""} />
 					</div>
 				</div>
-				<img src={user} alt={""} />
+				<img src={user} alt={""} onClick={()=>{
+					navigate("/profile");
+				}}/>
 			</div>
 			<div className={styles.line}>
 			</div>

@@ -13,6 +13,9 @@
   display: grid;
   align-content: start;
 
+  padding-left: 16px;
+  padding-top: 10px;
+
 }
 
 .line{
@@ -24,4 +27,26 @@
 
 .dateFilter{
 
+}
+
+.inputDate{
+
+  margin-bottom: 20px;
+
+}
+
+.wFilters{
+  display: grid;
+  align-content: start;
+  row-gap: 16px;
+}
+
+.titleFilter{
+
+}
+
+.checkBox{
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 10px;
 }
