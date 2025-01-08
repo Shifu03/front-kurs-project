@@ -18,35 +18,35 @@ agent.interceptors.request.use((config: any) => {
 
 agent.interceptors.response.use(
 	(config: any) => {
-		return config;
+	  return config;
 	},
 	async (error: any) => {
-		const originRequest = error.config;
-		if (
-			error.response?.status === 401 &&
-			error.config &&
-			!error.config._isRetry
-		) {
-			originRequest._isRetry = true;
-			try {
-				const refreshToken = localStorage.getItem("refreshToken");
-				const serverResponse = await agent.post(`/auth/refresh`, {
-					refreshToken: refreshToken,
-				});
-
-				localStorage.setItem("accessToken", serverResponse.data.accessToken);
-				localStorage.setItem("refreshToken", serverResponse.data.refreshToken);
-
-				return agent.request(originRequest);
-			} catch (repeatedError) {
-				localStorage.removeItem("accessToken");
-				localStorage.removeItem("refreshToken");
-				localStorage.removeItem("typeAuthorization");
-			}
+	  const originRequest = error.config;
+	  if (
+		error.response?.status === 401 &&
+		error.config &&
+		!error.config._isRetry
+	  ) {
+		originRequest._isRetry = true;
+		try {
+		  const refreshToken = localStorage.getItem("refreshToken");
+		  const serverResponse = await agent.post(`/auth/refresh`, {
+			refreshToken: refreshToken,
+		  });
+  
+		  localStorage.setItem("accessToken", serverResponse.data.accessToken);
+		  localStorage.setItem("refreshToken", serverResponse.data.refreshToken);
+  
+		  return agent.request(originRequest);
+		} catch (repeatedError) {
+		  localStorage.removeItem("accessToken");
+		  localStorage.removeItem("refreshToken");
+		  localStorage.removeItem("typeAuthorization");
 		}
-		// When error code !== 401
-		throw error;
+	  }
+	  // When error code !== 401
+	  throw error;
 	},
-);
+  );
 
 export default agent;

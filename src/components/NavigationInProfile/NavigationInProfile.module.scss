@@ -1,0 +1,63 @@
+@import "src/variables.scss";
+
+
+.left {
+  width: 300px;
+  height: 300px;
+
+  background: #F2F2F2;
+  border-radius: 8px;
+  border: 1px #A1A1A1 solid;
+
+  display: grid;
+  align-content: start;
+  row-gap: 16px;
+
+  color: black;
+  font-size: 24px;
+  font-family: $mainFonFamily;
+  font-weight: 500;
+
+  padding-top: 30px;
+  padding-left: 24px;
+}
+
+.right {
+  position: relative;
+  display: grid;
+  align-content: start;
+  row-gap: 20px;
+}
+
+.name {
+
+}
+
+.email {
+  color: #49734C;
+  font-size: 16px;
+  font-family: $mainFonFamily;
+  font-weight: 500;
+}
+
+.line{
+  width: 300px;
+  height: 1px;
+
+  background: #A1A1A1;
+
+  margin-left: -24px;
+}
+
+
+.logout{
+  cursor: pointer;
+
+  &:hover{
+    color: red;
+  }
+}
+
+.link{
+  cursor: pointer;
+}

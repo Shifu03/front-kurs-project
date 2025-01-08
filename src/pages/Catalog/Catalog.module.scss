@@ -1,0 +1,36 @@
+@import "src/variables.scss";
+
+.content {
+  display: grid;
+  justify-content: center;
+  align-content: start;
+
+  margin-top: 50px;
+
+  cursor: pointer;
+}
+
+.title {
+  color: #184B1B;
+  font-size: 32px;
+  font-family: $mainFonFamily;
+  font-weight: 700;
+}
+
+.areaCards{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  row-gap: 14px;
+  column-gap: 10px;
+}
+
+.wrap{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  column-gap: 10px;
+
+  margin-top: 24px;
+  margin-bottom: 100px;
+}

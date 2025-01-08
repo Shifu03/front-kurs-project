@@ -1,0 +1,22 @@
+@import "src/variables.scss";
+
+
+.content{
+  width: 884px;
+
+}
+
+.title {
+  color: #184B1B;
+  font-size: 36px;
+  font-family: $mainFonFamily;
+  font-weight: 700;
+}
+
+.areaTickets{
+  display: grid;
+  align-content: start;
+  row-gap: 10px;
+
+  margin-top: 20px;
+}

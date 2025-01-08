@@ -1,0 +1,50 @@
+@import "src/variables.scss";
+
+.title {
+  color: #184B1B;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.area {
+  width: 883px;
+  height: 800px;
+  background: #F2F2F2;
+  border: 1px #A1A1A1 solid;
+
+  border-radius: 8px;
+
+  padding-top: 30px;
+  padding-left: 38px;
+  padding-right: 30px;
+
+  display: grid;
+  align-content: start;
+  row-gap: 30px;
+}
+
+
+.input{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  height: 46px;
+  width: 200px;
+}
+
+
+.contactDataTitle {
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.data{
+  display: grid;
+  row-gap: 10px;
+  align-content: start;
+}
