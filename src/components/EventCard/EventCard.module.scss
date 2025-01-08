@@ -2,22 +2,22 @@
 
 .content {
   width: 290px;
-  height: 380px;
+  height: 450px;
 
   background: #F2F2F2;
   border-radius: 12px;
   border: 1px #A1A1A1 solid;
 
-  padding: 13px 40px;
+  padding: 13px 10px;
 
   display: grid;
-  row-gap: 14px;
-  align-content: start;
+  row-gap: 5px;
+  
 }
 
 .img{
-  max-width: 208px;
-  max-height: 228px;
+  padding: 0px 30px;
+  max-height: 250px;
 }
 
 .title{

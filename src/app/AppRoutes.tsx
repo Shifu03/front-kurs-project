@@ -4,10 +4,16 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Header from "../components/Header/Header";
 import MainGrid from "../components/MainGrid/MainGrid";
+import BookTicket from "src/pages/BookTicket/BookTicket";
+import NavigationInProfile from "src/components/NavigationInProfile/NavigationInProfile";
+import Profile from "src/pages/Profile/Profile";
+import MyTickets from "src/pages/MyTickets/MyTickets";
+import Catalog from "src/pages/Catalog/Catalog";
 import Profile from "../pages/Profile/Profile";
 import NavigationInProfile from "../components/NavigationInProfile/NavigationInProfile";
 import MyTickets from "../pages/MyTickets/MyTickets";
 import BookTicket from "../pages/BookTicket/BookTicket";
+
 
 
 const AppRoutes = () => {
@@ -19,6 +25,7 @@ const AppRoutes = () => {
 		</MainGrid>}>
 			<Route path="/" element={<MainPage />} />
 			<Route path="/book" element={<BookTicket />} />
+			<Route path="/catalog" element={<Catalog/>}/>
 			<Route path="/profile" element={<div className={"profileContent"}>
 				<NavigationInProfile />
 				<Outlet/>

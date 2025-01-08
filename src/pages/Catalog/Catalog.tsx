@@ -1,27 +1,27 @@
 import React from "react";
-import styles from "./MainPage.module.scss";
+import styles from "./Catalog.module.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import EventCard from "../../components/EventCard/EventCard";
-import { toast } from "react-toastify";
-import { fetchGetCurrentEvent } from "src/api/api";
+import exImg from "src/assets/imgs/exImg.png";
+import Filter from "../../components/Filter/Filter";
 
-
-
-const MainPage: React.FC<any> = () => {
+const Catalog: React.FC<any> = () => {
+	const navigate = useNavigate();
 	const location = useLocation();
-	
+
 	const events = location.state?.events.events;
 	const category = location.state?.category;
-	
+
 	console.log("Received events:", events);
 
 	return (<div className={styles.content}>
 		<div className={styles.title}>
-			Рекомендуем
+			{category}
 		</div>
 		<div className={styles.wrap}>
+			<Filter />
 			<div className={styles.areaCards}>
-				{events && events.length > 0 ? (
+			{events && events.length > 0 ? (
             events.map((event: any) => {
               return (
                 <EventCard
@@ -43,4 +43,4 @@ const MainPage: React.FC<any> = () => {
 	</div>);
 };
 
-export default MainPage;
+export default Catalog;
